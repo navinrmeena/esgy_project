@@ -32,10 +32,10 @@ export default function Home() {
       <Team />
       <Featured />
       <FAQ />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <Articles />
       <Join />
-      <Insta />
+      {/* <Insta /> */}
     </main>
   )
 }

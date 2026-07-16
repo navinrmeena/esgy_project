@@ -3,20 +3,31 @@ import Image from 'next/image'
 
 const teamMembers = [
   {
-    name: 'Dhruve',
+    name: 'Dhruv',
     role: 'AI / ML Engineer',
     image: '/images/team/dhruve.jpg',
-    badge: null,
-    bio: 'Specializes in building intelligent AI systems, LLM integrations, and machine learning pipelines that power next-generation products.',
-    skills: ['Python', 'LLMs', 'RAG', 'LangChain', 'OpenAI'],
+    badge: 'SDE-1 @ Clinikally',
+    bio: 'Backend engineer at Clinikally (YC S22). Built search-and-discovery handling 100K+ DAU and automated AI workflows. Expert in scalable FastAPI backends, RAG chatbots, and productionizing LLMs.',
+    skills: ['Python', 'FastAPI', 'LangChain', 'PyTorch', 'Medusa.js'],
+    apps: [
+      { name: 'Clinikally App', url: 'https://apps.apple.com/in/app/clinikally-skin-haircare-app/id6743621924' },
+      { name: 'Compass Search Engine', url: 'https://github.com/dhrroovv' },
+      { name: 'Matrixify Medusa System', url: 'https://github.com/dhrroovv' },
+      { name: 'RAG Customer Support Chatbot', url: 'https://github.com/dhrroovv' }
+    ]
   },
   {
     name: 'Priyanshu',
-    role: 'CEO & DevOps',
+    role: 'CEO / Infra Engineer',
     image: '/images/team/priyanshu.jpg',
-    badge: null,
-    bio: 'Leads product vision and engineering operations. Expert in cloud infrastructure, CI/CD pipelines, and scaling distributed systems.',
-    skills: ['AWS', 'Docker', 'GCP', 'CI/CD', 'Strategy'],
+    badge: 'DevOps @ Clinikally',
+    bio: 'DevOps Engineer & SRE at Clinikally (YC S22). Built scalable cloud infra from scratch on AWS (EKS/Kubernetes). Expert in CI/CD, Terraform, and cloud monitoring (NewRelic, Datadog).',
+    skills: ['AWS', 'Kubernetes', 'Terraform', 'CI/CD', 'Docker'],
+    apps: [
+      { name: 'Clinikally App', url: 'https://apps.apple.com/in/app/clinikally-skin-haircare-app/id6743621924' },
+      { name: 'va2pt.com Cloud Infra', url: 'https://va2pt.com' },
+      { name: 'Infrastructure Code', url: 'https://github.com/pkdeva' }
+    ]
   },
   {
     name: 'Navin',
@@ -25,6 +36,12 @@ const teamMembers = [
     badge: 'Freelance @ Sigfyn',
     bio: 'Fullstack engineer with production experience at Sigfyn — a fintech platform managing ₹58Cr+ in assets — and Clinikally (YC S22). Built scalable apps with React Native, Node.js, PostgreSQL & WebSockets.',
     skills: ['React Native', 'Node.js', 'TypeScript', 'PostgreSQL', 'WebSockets'],
+    apps: [
+      { name: 'Clinikally App', url: 'https://apps.apple.com/in/app/clinikally-skin-haircare-app/id6743621924' },
+      { name: 'Sigfyn App', url: 'https://play.google.com/store/apps/details?id=com.sigfyn.app&pcampaignid=web_share' },
+      { name: 'Solana DEX Order Engine' },
+      { name: 'NewZen Play (OTT Platform)' }
+    ]
   },
 ]
 
@@ -115,6 +132,37 @@ const Team = () => {
                       </span>
                     ))}
                   </div>
+
+                  {/* Apps links */}
+                  {member.apps && (
+                    <div className='mt-4 flex flex-col gap-2'>
+                      {member.apps.map((app, appIdx) => (
+                        app.url ? (
+                          <a
+                            key={appIdx}
+                            href={app.url}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='flex items-center justify-between px-4 py-2.5 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 rounded-xl transition-colors duration-200'
+                          >
+                            <span className='text-sm font-semibold text-black/80 dark:text-white/80'>{app.name}</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className='text-black/40 dark:text-white/40'>
+                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                              <polyline points="15 3 21 3 21 9"></polyline>
+                              <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                          </a>
+                        ) : (
+                          <div
+                            key={appIdx}
+                            className='flex items-center justify-between px-4 py-2.5 bg-black/5 dark:bg-white/5 rounded-xl border border-transparent'
+                          >
+                            <span className='text-sm font-medium text-black/70 dark:text-white/70'>{app.name}</span>
+                          </div>
+                        )
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

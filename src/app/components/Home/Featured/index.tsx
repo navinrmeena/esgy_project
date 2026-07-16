@@ -114,19 +114,48 @@ const Featured = () => {
               ))
             : featured.map((items, i) => (
                 <div key={i}>
-                  <div className='bg-transparent m-3 rounded-3xl'>
-                    <Image
-                      src={items.imgSrc}
-                      alt='gaby'
-                      width={636}
-                      height={620}
-                      className='rounded-2xl'
-                    />
-                    <div>
-                      <h4 className='max-w-sm font-bold text-center sm:text-start my-6 text-black'>
-                        {items.heading}
-                      </h4>
-                    </div>
+                  <div className='bg-transparent m-3 rounded-3xl transition-transform hover:scale-[1.02] duration-300'>
+                    {items.link ? (
+                      <a href={items.link} target="_blank" rel="noopener noreferrer" className="block relative group">
+                        <Image
+                          src={items.imgSrc}
+                          alt={items.heading}
+                          width={636}
+                          height={620}
+                          className='rounded-2xl w-full object-cover'
+                        />
+                        <div className="absolute inset-0 bg-black/40 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                          <span className="text-white font-semibold flex items-center gap-2">
+                            View Project
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                              <polyline points="15 3 21 3 21 9"></polyline>
+                              <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                          </span>
+                        </div>
+                        <div>
+                          <h4 className='max-w-sm font-bold text-center sm:text-start my-6 text-black hover:text-primary transition-colors'>
+                            {items.heading}
+                          </h4>
+                        </div>
+                      </a>
+                    ) : (
+                      <>
+                        <Image
+                          src={items.imgSrc}
+                          alt={items.heading}
+                          width={636}
+                          height={620}
+                          className='rounded-2xl w-full object-cover'
+                        />
+                        <div>
+                          <h4 className='max-w-sm font-bold text-center sm:text-start my-6 text-black'>
+                            {items.heading}
+                          </h4>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               ))}

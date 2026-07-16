@@ -76,42 +76,75 @@ const Aboutdata: aboutdata[] = [
   },
 ]
 
-// work-data (team data)
+// work-data (projects data)
 const WorkData: workdata[] = [
   {
-    profession: 'CEO & DevOps',
-    name: 'Priyanshu',
-    imgSrc: '/images/team/priyanshu.jpg',
+    profession: 'Search & Discovery Engine',
+    name: 'Compass Search Engine',
+    imgSrc: '/images/featured/feat1.jpg',
+    link: 'https://github.com/dhrroovv',
   },
   {
-    profession: 'AI / ML Engineer',
-    name: 'Dhruve',
-    imgSrc: '/images/team/dhruve.jpg',
+    profession: 'Custom Medusa.js Bulk System',
+    name: 'Matrixify Medusa System',
+    imgSrc: '/images/featured/feat2.jpg',
+    link: 'https://github.com/dhrroovv',
   },
   {
-    profession: 'Fullstack SDE',
-    name: 'Navin',
-    imgSrc: '/images/team/navin.png',
+    profession: 'AI Agent & LLM Workflow',
+    name: 'RAG Customer Support Chatbot',
+    imgSrc: '/images/featured/feat1.jpg',
+    link: 'https://github.com/dhrroovv',
+  },
+  {
+    profession: 'Scalable Cloud Architecture',
+    name: 'va2pt.com Cloud Infra',
+    imgSrc: '/images/featured/feat2.jpg',
+    link: 'https://va2pt.com',
+  },
+  {
+    profession: 'Terraform & CI/CD Pipelines',
+    name: 'Infrastructure Code',
+    imgSrc: '/images/featured/feat1.jpg',
+    link: 'https://github.com/pkdeva',
   },
 ]
 
-// featured data
 const FeaturedData: featureddata[] = [
   {
-    heading: 'SaaS Platform for Logistics Operations.',
+    heading: 'Clinikally Skin & Haircare App (iOS & Android)',
     imgSrc: '/images/featured/feat1.jpg',
+    link: 'https://apps.apple.com/in/app/clinikally-skin-haircare-app/id6743621924',
   },
   {
-    heading: 'AI-Powered Customer Support Assistant.',
+    heading: 'Sigfyn - Fintech Wealth Management Platform',
     imgSrc: '/images/featured/feat2.jpg',
+    link: 'https://play.google.com/store/apps/details?id=com.sigfyn.app&pcampaignid=web_share',
   },
   {
-    heading: 'Cross-Platform Mobile App for FinTech.',
+    heading: 'Compass Search Engine',
     imgSrc: '/images/featured/feat1.jpg',
+    link: 'https://github.com/dhrroovv',
   },
   {
-    heading: 'Custom Enterprise CRM & Admin Dashboard.',
+    heading: 'Matrixify Medusa System',
     imgSrc: '/images/featured/feat2.jpg',
+    link: 'https://github.com/dhrroovv',
+  },
+  {
+    heading: 'RAG Customer Support Chatbot',
+    imgSrc: '/images/featured/feat1.jpg',
+    link: 'https://github.com/dhrroovv',
+  },
+  {
+    heading: 'va2pt.com Cloud Infra',
+    imgSrc: '/images/featured/feat2.jpg',
+    link: 'https://va2pt.com',
+  },
+  {
+    heading: 'Infrastructure Code',
+    imgSrc: '/images/featured/feat1.jpg',
+    link: 'https://github.com/pkdeva',
   },
 ]
 
@@ -240,7 +273,7 @@ const ArticlesData: articles[] = [
     time: '6 min',
     heading: 'Integrating Custom AI/LLMs:',
     heading2: 'A Step-by-Step Business Guide',
-    name: 'Published by Dhruve',
+    name: 'Published by Dhruv',
     date: 'May 15, 2026',
     imgSrc: '/images/articles/article3.png',
     href: '/blog/3',

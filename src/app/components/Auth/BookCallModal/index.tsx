@@ -29,19 +29,36 @@ const BookCallModal = () => {
     }
 
     setLoading(true)
-    // Simulate submission / API call
-    setTimeout(() => {
-      toast.success('Consultation booked successfully!')
-      setLoading(false)
-      closeModal()
-      setFormData({
-        name: '',
-        startupName: '',
-        currentWebsite: '',
-        email: '',
-        message: '',
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
-    }, 1500)
+
+      const data = await response.json()
+
+      if (response.ok) {
+        toast.success('Consultation booked successfully!')
+        closeModal()
+        setFormData({
+          name: '',
+          startupName: '',
+          currentWebsite: '',
+          email: '',
+          message: '',
+        })
+      } else {
+        toast.error(data.error || 'Failed to book consultation.')
+      }
+    } catch (error) {
+      console.error('Submission error:', error)
+      toast.error('Something went wrong. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (

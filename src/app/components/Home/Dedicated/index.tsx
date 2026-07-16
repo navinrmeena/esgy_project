@@ -46,7 +46,7 @@ const Dedicated = () => {
               Whether you're validating an early-stage AI concept or upgrading an enterprise system, we act as your dedicated engineering arm.
             </p>
             <h5 className='mt-12 lg:pl-32 relative lg:before:block before:hidden before:absolute before:bg-black before:h-0.5 before:w-24 before:left-0 before:bottom-1/2 text-center lg:text-start'>
-              Priyanshu, CEO & DevOps
+              Priyanshu, CEO / Infra Engineer
             </h5>
           </div>
         </div>
