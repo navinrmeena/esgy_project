@@ -1,0 +1,93 @@
+# ===========================
+# Dependencies
+# ===========================
+node_modules/
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# ===========================
+# Next.js
+# ===========================
+/.next/
+/out/
+next-env.d.ts
+
+# ===========================
+# Production build
+# ===========================
+/build
+/dist
+
+# ===========================
+# Testing & Coverage
+# ===========================
+/coverage
+/.nyc_output
+
+# ===========================
+# Environment & Secrets
+# ===========================
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env.staging
+*.env
+
+# ===========================
+# Logs
+# ===========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# ===========================
+# TypeScript
+# ===========================
+*.tsbuildinfo
+
+# ===========================
+# Vercel / Deployment
+# ===========================
+.vercel
+.netlify
+
+# ===========================
+# OS Artifacts
+# ===========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===========================
+# Editor / IDE
+# ===========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.history/
+
+# ===========================
+# Misc
+# ===========================
+*.pem
+*.key
+*.cert
+*.p12
+/public/uploads/
